@@ -1,6 +1,6 @@
 # Quantum Network Performance Metrics
 
-This project implements 7 key performance metrics for quantum networks, integrated with the NetSquid simulator from the paper "Designing a Quantum Network Protocol".
+This project implements 6 key performance metrics for quantum networks, integrated with the NetSquid simulator and the architecture provided in \[1\].
 
 ## Project Structure
 
@@ -177,9 +177,5 @@ Results saved to `demo_metrics/results/`:
 
 ## References
 
-1. **QNP Paper**: "Designing a Quantum Network Protocol" (ACM CoNEXT 2020)
+1. **QNP Paper**: Kozlowski, Wojciech, Axel Dahlberg, and Stephanie Wehner. "Designing a quantum network protocol." Proceedings of the 16th international conference on emerging networking experiments and technologies. 2020.
 2. **NetSquid**: https://netsquid.org
-
-## License
-
-This demo is part of the QNP repository. See main repository LICENSE for details.
