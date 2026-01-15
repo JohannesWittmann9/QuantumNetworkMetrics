@@ -70,7 +70,7 @@ RA ←→ R0 ←→ RB
 - **Formula**: J = (Σxi)² / (n·Σxi²)
 - **Calculation**: Computed across throughput, latency, and fidelity for all nodes
 
-### 7. **RM (Robustness)**
+### 7. **RM (Robustness)**: Conceptual! Not part of Paper.
 - **Definition**: Performance resilience under network degradation
 - **Method**: Compare baseline vs degraded scenarios
 - **Degradation Model**: Stricter memory cutoffs (alpha values) simulating link failures
