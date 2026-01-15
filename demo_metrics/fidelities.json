@@ -1,0 +1,74 @@
+[
+    {
+        "key": {
+            "path_len": 1,
+            "alpha": 0.03
+        },
+        "map": {
+            "e2e": 98,
+            "link": 98,
+            "delay": 313720,
+            "cycle_time": 171235
+        }
+    },
+    {
+        "key": {
+            "path_len": 1,
+            "alpha": 0.1
+        },
+        "map": {
+            "e2e": 94,
+            "link": 94,
+            "delay": 91080,
+            "cycle_time": 53263
+        }
+    },
+    {
+        "key": {
+            "path_len": 1,
+            "alpha": 0.3
+        },
+        "map": {
+            "e2e": 82,
+            "link": 82,
+            "delay": 20240,
+            "cycle_time": 19843
+        }
+    },
+    {
+        "key": {
+            "path_len": 2,
+            "alpha": 0.03
+        },
+        "map": {
+            "e2e": 96,
+            "link": 98,
+            "delay": 313720,
+            "cycle_time": 171235
+        }
+    },
+    {
+        "key": {
+            "path_len": 2,
+            "alpha": 0.1
+        },
+        "map": {
+            "e2e": 89,
+            "link": 94,
+            "delay": 91080,
+            "cycle_time": 53263
+        }
+    },
+    {
+        "key": {
+            "path_len": 2,
+            "alpha": 0.3
+        },
+        "map": {
+            "e2e": 68,
+            "link": 82,
+            "delay": 20240,
+            "cycle_time": 19843
+        }
+    }
+]

@@ -1,0 +1,340 @@
+{
+    "scenario": "multiple_simulations_with_metrics",
+    "num_requests_per_node": 5,
+    "num_bps_per_request": 2,
+    "baseline": {
+        "ra_simulations": [
+            {
+                "mean_request_latency": 1483456.8467175215,
+                "mean_unit_latency": 741728.4233587608,
+                "mean_scaled_latency": 741728.4233587608,
+                "rejected_states": 0,
+                "throughput": 1348.2023453701706,
+                "total_units": 2,
+                "avg_fidelity": 0.9699999999999999,
+                "mean_fidelity": 0.9699999999999999,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 2181736.8467175215,
+                "mean_unit_latency": 1090868.4233587608,
+                "mean_scaled_latency": 1090868.4233587608,
+                "rejected_states": 0,
+                "throughput": 916.7008399794186,
+                "total_units": 2,
+                "avg_fidelity": 0.9698910299345662,
+                "mean_fidelity": 0.9698910299345662,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1655496.8467175215,
+                "mean_unit_latency": 827748.4233587608,
+                "mean_scaled_latency": 827748.4233587608,
+                "rejected_states": 0,
+                "throughput": 1208.0965324491863,
+                "total_units": 2,
+                "avg_fidelity": 0.9697820598691327,
+                "mean_fidelity": 0.9697820598691327,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1594776.8467175215,
+                "mean_unit_latency": 797388.4233587608,
+                "mean_scaled_latency": 797388.4233587608,
+                "rejected_states": 0,
+                "throughput": 1254.093953092269,
+                "total_units": 2,
+                "avg_fidelity": 0.9699999999999999,
+                "mean_fidelity": 0.9699999999999999,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1483456.8467175215,
+                "mean_unit_latency": 741728.4233587608,
+                "mean_scaled_latency": 741728.4233587608,
+                "rejected_states": 0,
+                "throughput": 1348.2023453701706,
+                "total_units": 2,
+                "avg_fidelity": 0.9698910299345662,
+                "mean_fidelity": 0.9698910299345662,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            }
+        ],
+        "rb_simulations": [
+            {
+                "mean_request_latency": 1392376.8467175215,
+                "mean_unit_latency": 696188.4233587608,
+                "mean_scaled_latency": 696188.4233587608,
+                "rejected_states": 0,
+                "throughput": 1436.3927443313412,
+                "total_units": 2,
+                "avg_fidelity": 0.9698910299345662,
+                "mean_fidelity": 0.9698910299345662,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1746576.8467175215,
+                "mean_unit_latency": 873288.4233587608,
+                "mean_scaled_latency": 873288.4233587608,
+                "rejected_states": 0,
+                "throughput": 1145.0970529918318,
+                "total_units": 2,
+                "avg_fidelity": 0.9698910299345662,
+                "mean_fidelity": 0.9698910299345662,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1372136.8467175215,
+                "mean_unit_latency": 686068.4233587608,
+                "mean_scaled_latency": 686068.4233587608,
+                "rejected_states": 0,
+                "throughput": 1457.5805647843922,
+                "total_units": 2,
+                "avg_fidelity": 0.9699999999999999,
+                "mean_fidelity": 0.9699999999999999,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1938856.8467175215,
+                "mean_unit_latency": 969428.4233587608,
+                "mean_scaled_latency": 969428.4233587608,
+                "rejected_states": 0,
+                "throughput": 1031.5356718501387,
+                "total_units": 2,
+                "avg_fidelity": 0.9698910299345662,
+                "mean_fidelity": 0.9698910299345662,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1685856.8467175215,
+                "mean_unit_latency": 842928.4233587608,
+                "mean_scaled_latency": 842928.4233587608,
+                "rejected_states": 0,
+                "throughput": 1186.3403490599671,
+                "total_units": 2,
+                "avg_fidelity": 0.9697820598691327,
+                "mean_fidelity": 0.9697820598691327,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            }
+        ],
+        "ra_averages": {
+            "throughput": 1215.059203252243,
+            "latency": 1679784.8467175215,
+            "unit_latency": 839892.4233587608,
+            "scaled_latency": 839892.4233587608,
+            "fidelity": 0.9699128239476529
+        },
+        "rb_averages": {
+            "throughput": 1251.389276603534,
+            "latency": 1627160.8467175215,
+            "unit_latency": 813580.4233587608,
+            "scaled_latency": 813580.4233587608,
+            "fidelity": 0.9698910299345662
+        },
+        "combined_fairness": {
+            "J_throughput": 0.9825595384947575,
+            "J_latency": 0.9792680621873673,
+            "J_fidelity": 0.9999999938147841
+        }
+    },
+    "degraded": {
+        "ra_simulations": [
+            {
+                "mean_request_latency": 1685856.8467175215,
+                "mean_unit_latency": 842928.4233587608,
+                "mean_scaled_latency": 842928.4233587608,
+                "rejected_states": 0,
+                "throughput": 1186.3403490599671,
+                "total_units": 2,
+                "avg_fidelity": 0.6593860099115092,
+                "mean_fidelity": 0.6593860099115092,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1695976.8467175215,
+                "mean_unit_latency": 847988.4233587608,
+                "mean_scaled_latency": 847988.4233587608,
+                "rejected_states": 0,
+                "throughput": 1179.2613819409742,
+                "total_units": 2,
+                "avg_fidelity": 0.6593860099115094,
+                "mean_fidelity": 0.6593860099115094,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 2080536.8467175215,
+                "mean_unit_latency": 1040268.4233587608,
+                "mean_scaled_latency": 1040268.4233587608,
+                "rejected_states": 0,
+                "throughput": 961.2903530910374,
+                "total_units": 2,
+                "avg_fidelity": 0.659406772549824,
+                "mean_fidelity": 0.659406772549824,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1574536.8467175215,
+                "mean_unit_latency": 787268.4233587608,
+                "mean_scaled_latency": 787268.4233587608,
+                "rejected_states": 0,
+                "throughput": 1270.2147962872084,
+                "total_units": 2,
+                "avg_fidelity": 0.6593963912306665,
+                "mean_fidelity": 0.6593963912306665,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 2181736.8467175215,
+                "mean_unit_latency": 1090868.4233587608,
+                "mean_scaled_latency": 1090868.4233587608,
+                "rejected_states": 0,
+                "throughput": 916.7008399794186,
+                "total_units": 2,
+                "avg_fidelity": 0.6594067725498239,
+                "mean_fidelity": 0.6594067725498239,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            }
+        ],
+        "rb_simulations": [
+            {
+                "mean_request_latency": 1928736.8467175215,
+                "mean_unit_latency": 964368.4233587608,
+                "mean_scaled_latency": 964368.4233587608,
+                "rejected_states": 0,
+                "throughput": 1036.9480955391919,
+                "total_units": 2,
+                "avg_fidelity": 0.6593963912306667,
+                "mean_fidelity": 0.6593963912306667,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1827536.8467175215,
+                "mean_unit_latency": 913768.4233587608,
+                "mean_scaled_latency": 913768.4233587608,
+                "rejected_states": 0,
+                "throughput": 1094.3691798018974,
+                "total_units": 2,
+                "avg_fidelity": 0.6594067725498239,
+                "mean_fidelity": 0.6594067725498239,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1868016.8467175215,
+                "mean_unit_latency": 934008.4233587608,
+                "mean_scaled_latency": 934008.4233587608,
+                "rejected_states": 0,
+                "throughput": 1070.6541557772348,
+                "total_units": 2,
+                "avg_fidelity": 0.6593963912306666,
+                "mean_fidelity": 0.6593963912306666,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1625136.8467175215,
+                "mean_unit_latency": 812568.4233587608,
+                "mean_scaled_latency": 812568.4233587608,
+                "rejected_states": 0,
+                "throughput": 1230.6655922789723,
+                "total_units": 2,
+                "avg_fidelity": 0.6593860099115093,
+                "mean_fidelity": 0.6593860099115093,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            },
+            {
+                "mean_request_latency": 1948976.8467175215,
+                "mean_unit_latency": 974488.4233587608,
+                "mean_scaled_latency": 974488.4233587608,
+                "rejected_states": 0,
+                "throughput": 1026.1794558352049,
+                "total_units": 2,
+                "avg_fidelity": 0.6593860099115094,
+                "mean_fidelity": 0.6593860099115094,
+                "simulation_time": 10000000.0,
+                "start_time": 0.0,
+                "end_time": 10000000.0,
+                "total_requests": 1
+            }
+        ],
+        "ra_averages": {
+            "throughput": 1102.7615440717211,
+            "latency": 1843728.8467175215,
+            "unit_latency": 921864.4233587608,
+            "scaled_latency": 921864.4233587608,
+            "fidelity": 0.6593963912306666
+        },
+        "rb_averages": {
+            "throughput": 1091.7632958465001,
+            "latency": 1839680.8467175215,
+            "unit_latency": 919840.4233587608,
+            "scaled_latency": 919840.4233587608,
+            "fidelity": 0.6593943149668352
+        },
+        "fairness": {
+            "J_throughput": 0.9898981835395689,
+            "J_latency": 0.9896005575884262,
+            "J_fidelity": 0.9999999998289738
+        }
+    },
+    "robustness": {
+        "RM_throughput": 0.8897509345285589,
+        "RM_latency": 0.8977946980291187,
+        "RM_fidelity": 0.6798577616794321
+    }
+}

@@ -1,0 +1,250 @@
+nv_device: &nv_device
+  qpd_config:
+    type: nv_communication_device
+
+    num_qubits: 5
+
+    qubit: &qubit
+        qubit_type: electron
+        noise_model:
+          T1T2:
+            T1: 0
+            T2: 0
+        gates_ids:
+          - electron_gates
+
+    gates: &nv_gates
+      electron_gates:
+        initialization_op:
+          noise_model:
+            DEPOLARIZE_NM:
+              depolar_prob: 0
+          operation_time: 2000.0
+
+        single_qubit_gate:
+          noise_model:
+            DEPOLARIZE_NM:
+              depolar_prob: 0
+          operation_time: 5
+
+        measurement_op:
+          noise_model:
+            MEASURE_QUANTUMNM:
+              prob_error_0: 0
+              prob_error_1: 0
+          operation_time: 3700.0
+
+      two_qubit_gates:
+        two_qubit_gate:
+          noise_model:
+            DEPOLARIZE_NM:
+              depolar_prob: 0
+          operation_time: 500000.0
+
+    photon_emission: &nv_photon
+      photon_emission_noise:
+        delta_w: null
+        tau_decay: null
+
+        tau_emission: 0
+        time_window: 25
+        delta_phi: 0
+        p_zero_phonon: 1
+        collection_eff: 1
+        p_double_exc: 0
+
+      photon_emission_delay: 5500.0
+
+    qubits: null
+
+    interactions: null
+
+heralded_conn: &heralded_conn
+  conn_config:
+    type: node_centric_heralded_fibre_connection
+
+    lengthA: 0.001
+    lengthB: 0.001
+    p_loss_init: 0
+    p_loss_length: 0
+    time_window: 25
+    c: 206753.41931034482
+    c_noise_model: "default"
+    c_loss_model: "default"
+    q_noise_model: "default"
+    q_loss_model: "default"
+    bandwidth: 1000
+    dark_rate: 0
+    detection_eff: 1
+    visibility: 1
+    t0: 0
+    c_prob_loss_A: 0.0
+    c_prob_loss_B: 0.0
+    c_prob_error_A: 0.0
+    c_prob_error_B: 0.0
+
+classical_conn: &classical_conn
+  conn_config:
+    type: classical_fibre_connection
+
+    length: 0.002
+    loss_model: "default"
+    noise_model: "default"
+    c: 206753.41931034482
+    bandwidth: 1000
+
+memory_delay: 5_000_000
+
+alphas:
+  - 0.03
+  - 0.10
+  - 0.30
+
+fibre: &ctl_fibre
+  type: classical_fibre_direct_connection
+
+  properties:
+    length: 0.002
+    p_loss_init: 0
+    p_loss_length: 0
+
+# ./simulations/topology/three_nodes.yml
+link: &link
+  connections:
+    - conn_ID: mhp_conn
+      << : *heralded_conn
+
+    - conn_ID: egp_conn
+      << : *classical_conn
+
+    - conn_ID: dqp_conn
+      << : *classical_conn
+
+    - conn_ID: qnp_conn
+      << : *classical_conn
+
+nodes:
+  - name: RA
+    << : *nv_device
+
+  - name: R0
+    << : *nv_device
+
+  - name: RB
+    << : *nv_device
+
+links:
+  - nodeA: RA
+    nodeB: R0
+    << : *link
+
+  - nodeA: R0
+    nodeB: RB
+    << : *link
+
+# -----------------------------------------------------------------------------
+# New style component configuration.
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# Base configurations.
+# -----------------------------------------------------------------------------
+
+router: &router
+  type: router
+
+  properties:
+    app_ports:
+      - "app-RouteApp"
+    comms_per_link: 2
+
+  ports:
+    app-RouteApp:
+      remote: RouteApp
+      port: ctl
+
+  components:
+    RouteApp:
+      type: route_client
+
+# -----------------------------------------------------------------------------
+# Component list.
+# -----------------------------------------------------------------------------
+
+components:
+
+  # ---------------------------------------------------------------------------
+  # Controller.
+  # ---------------------------------------------------------------------------
+
+  Controller:
+    type: controller
+
+    properties:
+      client_ports:
+        - "client-RA"
+        - "client-RB"
+        - "client-R0"
+
+      app_ports:
+        - "app-RouteApp"
+
+    ports:
+      app-RouteApp:
+        remote: RouteApp
+        port: ctl
+
+    components:
+      RouteApp:
+        type: route_ctl
+
+  # ---------------------------------------------------------------------------
+  # Routers.
+  # ---------------------------------------------------------------------------
+
+  RA:
+    << : *router
+
+  RB:
+    << : *router
+
+  R0:
+    << : *router
+
+  # ---------------------------------------------------------------------------
+  # Fibres.
+  # ---------------------------------------------------------------------------
+
+  Fibre-RA:
+    << : *ctl_fibre
+
+    ports:
+      A:
+        remote: Controller
+        port: client-RA
+      B:
+        remote: RA
+        port: ctl
+
+  Fibre-RB:
+    << : *ctl_fibre
+
+    ports:
+      A:
+        remote: Controller
+        port: client-RB
+      B:
+        remote: RB
+        port: ctl
+
+  Fibre-R0:
+    << : *ctl_fibre
+
+    ports:
+      A:
+        remote: Controller
+        port: client-R0
+      B:
+        remote: R0
+        port: ctl
+
